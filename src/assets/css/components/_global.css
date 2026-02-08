@@ -1,0 +1,6 @@
+html {
+  @apply bg-[#F5F5F5] scroll-smooth;
+}
+body {
+  @apply antialiased text-base text-typo-dark font-normal;
+}

@@ -1,0 +1,6 @@
+@import "./_tailwind.css";
+@import "./components/_global.css";
+
+* {
+  /* outline: red 1px dotted; */
+}

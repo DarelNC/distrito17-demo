@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-typo-dark: #0A0A0A;
+  --color-typo-light: #FFFFFF;
+}
