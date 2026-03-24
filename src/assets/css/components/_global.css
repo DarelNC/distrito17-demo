@@ -1,6 +1,24 @@
 html {
-  @apply bg-[#F5F5F5] scroll-smooth;
+  @apply bg-[#F7F4EB] scroll-smooth;
 }
 body {
-  @apply antialiased text-base text-typo-dark font-normal;
+  @apply antialiased text-base text-typo-dark font-normal font-primary;
+}
+.hero {
+  background-image: url("/src/assets/images/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-2 {
+  background-image: url("/src/assets/images/img-aux-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-3 {
+  background-image: url("/src/assets/images/img-aux-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

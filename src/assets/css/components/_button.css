@@ -1,0 +1,9 @@
+.btn {
+  @apply py-[1.125rem] px-[1.5rem]
+}
+.btn.variant-2 {
+  @apply py-[1.125rem] px-[2.5rem]
+}
+.btn>span {
+  @apply text-[1.125rem] leading-[120%] tracking-[-0.023rem]
+}

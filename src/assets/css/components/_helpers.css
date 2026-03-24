@@ -1,0 +1,29 @@
+.text-aux-1 {
+  @apply text-[2.25rem] leading-[95%] tracking-[-0.068rem]
+    md:text-[4.5rem] md:tracking-[-0.135rem]
+    xl:text-[7.5rem] xl:tracking-[-0.225rem]
+}
+.text-aux-2 {
+  @apply text-[0.75rem] leading-[95%] tracking-[-0.024rem]
+    md:text-[1rem] md:tracking-[-0.03rem]
+    xl:text-[1.125rem] xl:tracking-[-0.034rem]
+}
+.text-aux-3 {
+  @apply text-[1.375rem] leading-[109%] tracking-[-0.069rem]
+    md:text-[2rem] md:tracking-[-0.1rem]
+}
+.text-aux-4 {
+  @apply text-[1.125rem] leading-[135%] tracking-[-0.023rem]
+}
+.text-aux-5 {
+  @apply text-[0.875rem] leading-[140%] tracking-[0rem]
+    md:text-[1rem]
+}
+.text-aux-6 {
+  @apply text-[1.125rem] leading-[135%] tracking-[-0.023rem]
+    md:text-[1.375rem] md:tracking-[-0.028rem]
+}
+.text-aux-7 {
+  @apply text-[2.25rem] leading-[95%] tracking-[-0.135rem]
+    md:text-[4.75rem] md:tracking-[-0.285rem]
+}
