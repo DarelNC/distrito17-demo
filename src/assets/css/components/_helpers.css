@@ -27,3 +27,11 @@
   @apply text-[2.25rem] leading-[95%] tracking-[-0.135rem]
     md:text-[4.75rem] md:tracking-[-0.285rem]
 }
+.text-aux-8 {
+  @apply text-[5.25rem] leading-[95%] tracking-[-0.158rem]
+    xl:text-[7.5rem] xl:tracking-[-0.225rem]
+}
+.text-aux-9 {
+  @apply text-[1.25rem] leading-[109%] tracking-[-0.063rem]
+    xl:text-[1.5rem] xl:tracking-[-0.075rem]
+}
