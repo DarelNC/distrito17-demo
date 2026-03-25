@@ -34,3 +34,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.hero-6 {
+  background-image: url("/src/assets/images/img-aux-5.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

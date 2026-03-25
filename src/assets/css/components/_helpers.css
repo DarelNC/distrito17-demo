@@ -35,3 +35,8 @@
   @apply text-[1.25rem] leading-[109%] tracking-[-0.063rem]
     xl:text-[1.5rem] xl:tracking-[-0.075rem]
 }
+.text-aux-10 {
+  @apply text-[6.25rem] leading-[109%] tracking-[-0.313rem]
+    md:text-[12.5rem] md:tracking-[-0.625rem]
+    xl:text-[18.75rem] xl:tracking-[-0.938rem]
+}
