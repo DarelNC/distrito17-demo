@@ -2,7 +2,19 @@
 @import "./components/_global.css";
 @import "./components/_helpers.css";
 @import "./components/_button.css";
+@import "./components/_menu.css";
+@import "./components/_divider.css";
+@import "./components/_intro.css";
 
 * {
   /* outline: red 1px dotted; */
+}
+
+.lang-selected {
+  @apply font-medium border-b !text-typo-light !cursor-default
+}
+
+.email-reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
 }

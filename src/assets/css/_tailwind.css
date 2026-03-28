@@ -3,9 +3,10 @@
 @theme {
   --font-primary: "Geist", sans-serif;
 
-  --color-primary: #0D1F08;
-  --color-secondary: #31110F;
+  --color-primary: #065B50;
+  --color-secondary: #043D36;
   --color-tertiary: #1F0808;
+  --color-accent: #F7F4EB;
   --color-typo-dark: #000000;
   --color-typo-light: #F2F2F2;
 }

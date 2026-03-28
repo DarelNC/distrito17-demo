@@ -1,9 +1,27 @@
 .btn {
-  @apply py-[1.125rem] px-[1.5rem]
+  @apply block py-[1.125rem] px-[1.5rem] cursor-pointer
 }
 .btn.variant-2 {
   @apply py-[1.125rem] px-[2.5rem]
 }
 .btn>span {
   @apply text-[1.125rem] leading-[120%] tracking-[-0.023rem]
+}
+
+.btn {
+  transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+.btn.bg-secondary:hover {
+  background-color: #065B50;
+}
+.btn.bg-secondary:active {
+  opacity: 0.8;
+}
+
+.btn.bg-accent:hover {
+  background-color: #E7D4CB;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn.bg-accent:active {
+  background-color: #FFFFFF;
 }

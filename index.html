@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Jones & Brown Legal</title>
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Distrito 17 | Asesores inmobiliarios Villaverde</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,81 +18,148 @@
   <div class="flex flex-col items-center">
     <!-- [hero] -->
     <div class="bg-primary w-full flex justify-center">
-      <div class="flex flex-col h-[31.25rem] md:h-[50rem] lg:h-screen w-full text-typo-light">
+      <div class="flex flex-col h-[min(31.25rem,100vh)] md:h-[min(50rem,100vh)] lg:h-screen w-full text-typo-light">
         <!-- [navbar] -->
-        <div class="flex items-center justify-between py-5 px-[3.125rem]">
+        <div id="navbar" class="flex items-center justify-between py-5 pl-4 pr-7 md:px-[3.125rem]">
           <!-- [logo] -->
           <div>
-            <svg class="h-6" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4.66805 0L2.27483 1.38172C0.86716 2.19444 0 3.69641 0 5.32184V18.6786C0 20.3041 0.86716 21.806 2.27483 22.6188L4.6672 24L16.1187 17.3879L27.569 23.9987L29.9591 22.6188C31.3668 21.806 32.234 20.3041 32.234 18.6786V5.32184C32.234 3.69641 31.3668 2.19444 29.9591 1.38172L27.5677 0.00101649L16.1187 6.61106L4.66805 0Z"
-                fill="#F2F2F2" />
-            </svg>
+            <img src="/logo.png" alt="" class="h-12 md:h-[3.75rem]">
           </div>
 
-          <div class="flex items-center gap-9">
-            <p class="text-aux-2">
-              Services
-            </p>
-            <p class="text-aux-2">
-              Schedule a Consult
-            </p>
+          <div class="hidden md:flex items-center gap-9">
+            <a href="/services" data-i18n="services" class="block text-aux-2 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 duration-150 hover:border-white">
+              <span>Servicios</span>
+            </a>
+
+            <a class="block text-aux-2 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 duration-150 hover:border-white"
+              href="https://wa.me/34617378073"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="waUrl"
+            >
+              <span data-i18n="ctaCall">Agenda una llamada</span>
+            </a>
+
+            <!-- [lang] -->
+            <div class="flex items-center justify-end gap-1 cursor-default ml-2 xl:ml-10">
+              <p onclick="changeLanguage('es')" class="btn-es cursor-pointer text-aux-2 leading-[100%] text-typo-light/40">ES</p>
+              <span class="text-lg font-medium text-typo-light/80"> / </span>
+              <p onclick="changeLanguage('en')" class="btn-en cursor-pointer text-aux-2 leading-[100%] text-typo-light/40">EN</p>
+            </div>
+            <!-- [lang] -->
+          </div>
+
+          <!-- ::menu-button -->
+          <div class="md:hidden">
+            <div id="menu-wrapper" class="hamburger-menu-wrapper menu-clikable-item" onclick="toggleMenu()">
+              <div class="hamburger-menu">
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- [sec 1] -->
         <div class="hero grow relative z-10">
-          <!-- [overlay] -->
-          <div class="bg-black/40 absolute top-0 left-0 h-full w-full z-0"></div>
+          <!-- ::menu backdrop -->
+          <div id="menu-backdrop" class="bg-primary invisible absolute top-0 left-0 w-full h-0 z-50">
+            <div class="divider"></div>
+            
+            <div class="flex flex-col justify-between w-full h-full px-8 pt-8 pb-12">
+              <div>
+                <!-- [lang] -->
+                <div class="flex items-center justify-end gap-1.5 cursor-default">
+                  <p onclick="changeLanguage('es')" class="btn-es cursor-pointer text-lg leading-[100%] text-typo-light/40">ES</p>
+                  <span class="text-lg font-medium text-typo-light/80"> / </span>
+                  <p onclick="changeLanguage('en')" class="btn-en cursor-pointer text-lg leading-[100%] text-typo-light/40">EN</p>
+                </div>
+                <!-- [lang] -->
 
-          <div class="relative z-10 flex flex-col h-full justify-center md:justify-end gap-20 px-6 pb-[4.5rem] sm:px-8 md:px-[3.125rem]">
-            <div>
-              <p class="text-aux-1">Jones & Brown Legal</p>
+                <a href="/services" data-i18n="services" class="block text-3xl mt-5 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 hover:border-white">
+                  <span>Servicios</span>
+                </a>
+                <a class="block text-3xl mt-5 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 hover:border-white"
+                  href="https://wa.me/34617378073"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="waUrl"
+                >
+                  <span data-i18n="ctaCall">Agenda una llamada</span>
+                </a>
+              </div>
+
+              <div class="mb-20">
+                <div class="flex gap-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                      <path
+                        d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                    </svg>
+                  </span>
+                  <a href="https://maps.app.goo.gl/7pemQbLcpydQkXqG9" target="_blank" data-i18n="address" class="underline">Avenida Orovilla 54, Madrid, 28041</a>
+                </div>
+                <div class="flex gap-2 mt-4 cursor-default">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                      <path
+                        d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
+                    </svg>
+                  </span>
+                  <p data-i18n="schedule">Lunes a viernes: de 9:30 a 14:00 y de 16:30 a 20:00</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-col xl:flex-row xl:justify-between xl:items-center gap-4">
-              <p class="text-aux-3 font-medium">Deep expertise, decisive courtroom presence</p>
-              <p class="text-aux-4 max-w-[23.125rem]">We've been serving the Los Angeles area with expert legal counsel since 1976.</p>
+          </div>
+          <!-- ::menu backdrop -->
+
+
+          <!-- [overlay] -->
+          <div class="bg-black/50 absolute top-0 left-0 h-full w-full z-0"></div>
+
+          <div class="relative z-10 flex flex-col gap-5 lg:gap-10 justify-end lg:justify-center lg:items-center lg:text-center h-full px-6 pb-[4.5rem] sm:px-8 md:px-[3.125rem]">
+            <div>
+              <p class="intro-y text-aux-1-v2 -ml-1 md:-ml-1.5 xl:ml-0">Distrito 17</p>
+              <!-- <p class="text-aux-3-v2 font-medium mt-3">Tu hogar en Villaverde, sin complicaciones</p> -->
+              <p data-i18n="heroTitle" class="intro-y text-aux-3-v2 font-medium mt-2.5 lg:mt-5">Construye tu futuro en el corazón de Villaverde</p>
+            </div>
+
+            <div class="divider fade-right mt-1 lg:hidden"></div>
+            <div class="divider hidden lg:block w-10/12"></div>
+
+            <div>
+              <p data-i18n="heroSub" class="intro-y text-aux-4-v2">Asesores Inmobiliarios en Villaverde <br class="hidden sm:inline"/> con más de 10 años de experiencia a tu servicio</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- [sec 2] -->
     <div class="max-w-[90rem] w-full">
-      <!-- [sec 2] -->
       <div class="px-6 pt-12 pb-20 md:px-16 md:pt-[8.438rem] md:pb-[11.25rem] xl:pl-[9.5rem]">
-        <p class="text-aux-3 font-medium">
-          Welcome to Jones & Brown Legal
+        <p data-i18n="aboutTitle" class="text-aux-3 font-medium">
+          Bienvenido a Distrito 17
         </p>
         
         <div class="mt-10 md:mt-[3.75rem] flex flex-col gap-6 md:flex-row md:gap-12">
-          <p class="text-aux-4 flex-1 md:max-w-[28rem]">
-            Jones & Brown Legal has been a pillar
-            of the Los Angeles legal community,
-            providing expert legal counsel across
-            a wide spectrum of practice areas.
-            We are more than just attorneys, we are
-            trusted advisors, dedicated advocates,
-            and strategic partners committed to achieving
-            the best possible outcomes for our clients.
+          <p data-i18n="aboutP1" class="text-aux-4 flex-1 md:max-w-[28rem]">
+            Entendemos que una casa es mucho más que cuatro paredes; es el escenario donde se construye tu vida. En Distrito 17, combinamos una década de experiencia inmobiliaria con un conocimiento profundo de Villaverde para ofrecerte un servicio donde la transparencia y la cercanía son los cimientos de cada operación.
           </p>
-          <p class="text-aux-4 flex-1 md:max-w-[28rem]">
-            We combine decades of experience with a
-            deep understanding of the complexities
-            of California law. Our team of seasoned
-            trial attorneys boasts a proven track record
-            of success in courtrooms throughout Los Angeles
-            and beyond. We pride ourselves on our comprehensive
-            expertise, covering nearly every field of law,
-            ensuring that whatever your legal challenge,
-            we have the knowledge and experience to guide you.
+          <p data-i18n="aboutP2" class="text-aux-4 flex-1 md:max-w-[28rem]">
+            Nuestro equipo de asesores no solo gestiona activos, gestiona sueños y proyectos de futuro. Nos encargamos de cada detalle del proceso para que tú solo tengas que preocuparte de dar el siguiente paso, garantizando soluciones personalizadas que transforman la complejidad del mercado en una experiencia segura y gratificante.
           </p>
         </div>
 
-        <div class="mt-[3.125rem]">
-          <button class="btn bg-secondary w-full sm:w-fit rounded-full">
-            <span class="text-typo-light">Schedule a Consult</span>
-          </button>
+        <div class="mt-20">
+          <a class="btn bg-secondary w-full sm:w-fit rounded-full text-center"
+            href="https://wa.me/34617378073"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="waUrl"
+          >
+            <span data-i18n="ctaCall" class="text-typo-light">Agenda una llamada</span>
+          </a>
         </div>
       </div>
     </div>
@@ -105,24 +172,26 @@
       <div class="max-w-[90rem] w-full text-typo-light">
         <div class="px-7 py-[4rem] md:pl-[4rem] md:pr-1 md:pt-[5.75rem] md:pb-[7.875rem] xl:pl-[9.5rem]">
           <div class="xl:flex xl:gap-20">
-            <p class="text-[#F7F4EB] text-aux-3 font-medium">What We Offer</p>
+            <p data-i18n="whatWeOffer" class="text-accent text-aux-3 font-medium min-w-[15.875rem]">What We Offer</p>
 
             <div class="mt-6 md:mt-12 xl:mt-0">
-              <div class="flex flex-col gap-2">
-                <p class="text-[#F7F4EB] text-aux-7">Business Formation</p>
-                <p class="text-[#F7F4EB] text-aux-7">Contract Drafting</p>
-                <p class="text-[#F7F4EB] text-aux-7">Mergers and Acquisitions</p>
-                <p class="text-[#F7F4EB] text-aux-7">Property Protection</p>
-                <p class="text-[#F7F4EB] text-aux-7">Employment Law</p>
-                <p class="text-[#F7F4EB] text-aux-7">Corporate Governance</p>
-                <p class="text-[#F7F4EB] text-aux-7">Shareholder Disputes</p>
-                <p class="text-[#FFF0C4]/50 text-aux-7">+More</p>
-              </div>
+              <a href="/services.html" class="flex flex-col gap-2 cursor-pointer">
+                <p data-i18n="service1" class="text-accent text-aux-7 transition-transform duration-200 hover:translate-x-1">Business Formation</p>
+                <p data-i18n="service2" class="text-accent text-aux-7 transition-transform duration-200 hover:translate-x-1">Contract Drafting</p>
+                <p data-i18n="service3" class="text-accent text-aux-7 transition-transform duration-200 hover:translate-x-1">Mergers and Acquisitions</p>
+                <p data-i18n="service4" class="text-accent text-aux-7 transition-transform duration-200 hover:translate-x-1">Property Protection</p>
+                <p data-i18n="service5" class="text-accent text-aux-7 transition-transform duration-200 hover:translate-x-1">Employment Law</p>
+                <p data-i18n="service6" class="text-accent text-aux-7 transition-transform duration-200 hover:translate-x-1">Corporate Governance</p>
+                <p data-i18n="service7" class="text-accent text-aux-7 transition-transform duration-200 hover:translate-x-1">Shareholder Disputes</p>
+                <p data-i18n="more" class="text-[#FFF0C4]/50 text-aux-7 transition-transform duration-200 hover:translate-x-1">+More</p>
+              </a>
 
               <div class="mt-16">
-                <button class="btn variant-2 bg-white w-fit rounded-full">
-                  <span class="text-typo-dark">Services</span>
-                </button>
+                <a class="btn variant-2 bg-accent w-fit rounded-full cursor-pointer"
+                  href="/services"
+                >
+                  <span data-i18n="services" class="text-typo-dark">Services</span>
+                </a>
               </div>
             </div>
           </div>
@@ -134,11 +203,9 @@
     <div class="bg-white w-full px-7 py-[4rem] md:py-[7.25rem] md:px-20">
       <div class="flex flex-col items-center gap-9 text-center">
         <div>
-          <p class="text-aux-3 font-medium">Hear From Our Clients</p>
-          <p class="text-aux-4 mt-8 lg:max-w-[30rem]">
-            We believe that our clients' experiences
-            speak volumes about the quality of our legal
-            services. Here's what some of them have to say:
+          <p data-i18n="testimonialsTitle" class="text-aux-3 font-medium">Hear From Our Clients</p>
+          <p data-i18n="testimonialsHeading" class="text-aux-4 mt-8 lg:max-w-[30rem]">
+            Creemos que las experiencias de nuestros clientes dicen mucho sobre la calidad de nuestros servicios. Esto es lo que algunos de ellos tienen que decir:
           </p>
         </div>
 
@@ -165,7 +232,7 @@
 
             <!-- [dots] -->
             <div class="flex items-center gap-2.5">
-              <span class="bg-[#31110F] min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
+              <span class="bg-secondary min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
               <span class="bg-black/25 min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
               <span class="bg-black/25 min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
               <span class="bg-black/25 min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
@@ -181,71 +248,106 @@
         </div>
 
         <div>
-          <p class="text-aux-4 lg:max-w-[30rem]">
-            Let us help you navigate your legal journey
-            with confidence and peace of mind.
-            Contact Jones & Brown Legal today.
+          <p data-i18n="ctaHeading" class="text-aux-4">
+            ¿Pensando en vender o alquilar tu propiedad?
+          </p>
+          <p data-i18n="ctaSubheading" class="text-aux-4 sm:max-w-[30rem] mt-1">
+            Déjanos tus datos y un asesor experto en Villaverde te realizará una valoración gratuita y sin compromiso.
           </p>
 
           <div class="flex justify-center mt-12">
-            <button class="btn bg-secondary w-fit rounded-full">
-              <span class="text-typo-light">Schedule a Consult</span>
-            </button>
+            <a class="btn bg-secondary w-fit rounded-full"
+              href="https://wa.me/34617378073"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="waUrl"
+            >
+              <span data-i18n="ctaCall" class="text-typo-light">Schedule a Consult</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- [sec 6] -->
-    <div class="hero-3 w-full h-[17.5rem] sm:h-[21.25rem] md:h-[30rem] lg:h-[39.063rem] 2xl:h-[50rem]"></div>
+    <div class="hero-3 relative w-full h-[17.5rem] sm:h-[21.25rem] md:h-[30rem] lg:h-[39.063rem] 2xl:h-[50rem]">
+      <!-- [overlay] -->
+      <div class="bg-black/30 absolute top-0 left-0 h-full w-full z-0"></div>
+    </div>
 
     <!-- [footer] -->
-    <div class="flex flex-col items-center w-full">
+    <div class="bg-primary text-typo-light flex flex-col items-center w-full">
       <div class="max-w-5xl w-full">
         <div class="px-7 py-[4.25rem]">
-          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
-            <!-- [logo] -->
-            <div>
-              <svg class="w-10" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.66805 0L2.27483 1.38172C0.86716 2.19444 0 3.69641 0 5.32184V18.6786C0 20.3041 0.86716 21.806 2.27483 22.6188L4.6672 24L16.1187 17.3879L27.569 23.9987L29.9591 22.6188C31.3668 21.806 32.234 20.3041 32.234 18.6786V5.32184C32.234 3.69641 31.3668 2.19444 29.9591 1.38172L27.5677 0.00101649L16.1187 6.61106L4.66805 0Z"
-                  fill="#000000" />
-              </svg>
-            </div>
-
-            <p class="text-aux-3">Jones & Brown Legal</p>
+          <!-- [logo] -->
+          <div class="-ml-2">
+            <img src="/logo.png" alt="" class="h-[3.75rem] lg:h-20">
           </div>
 
           <div class="mt-12 xl:mt-20">
-            <p class="text-aux-6">Deep expertise, decisive courtroom presence</p>
+            <p data-i18n="footerDesc" class="text-aux-6">Tu inmobiliaria de confianza en el corazón de Villaverde.</p>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-6 mt-12 xl:mt-20">
             <div class="flex flex-col gap-0.5 md:gap-1">
-              <p class="text-aux-5">smth@mail.com</p>
-              <p class="text-aux-5">(555) 123-4567</p>
+              <p id="mailto-trigger" data-i18n="footerMail" class="email-reverse text-aux-5 cursor-pointer w-fit hover:underline"></p>
+              <a
+                href="https://wa.me/34617378073"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="waUrl"
+              >
+                <span data-i18n="footerPhone" class="text-aux-5 cursor-pointer w-fit hover:underline">+34 617 378 073</span>
+              </a>
             </div>
 
-            <div class="flex flex-col gap-0.5 md:gap-1">
-              <p class="text-aux-5">123 Candyland Lane</p>
-              <p class="text-aux-5">Suite 123</p>
-              <p class="text-aux-5">Los Angeles, CA 941177</p>
-            </div>
-
-            <div class="flex flex-col gap-0.5 md:gap-1">
-              <p class="text-aux-5">Instagram</p>
-              <p class="text-aux-5">Facebook</p>
-              <p class="text-aux-5">Linkdln</p>
+            <div class="max-w-[18.75rem]">
+              <div class="flex gap-2">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                    <path
+                      d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                  </svg>
+                </span>
+                <a href="https://maps.app.goo.gl/7pemQbLcpydQkXqG9" target="_blank" data-i18n="address" class="underline text-aux-5">
+                  Avenida Orovilla 54, Madrid, 28041
+                </a>
+              </div>
+              <div class="flex gap-2 mt-2">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                    <path
+                      d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
+                  </svg>
+                </span>
+                <p data-i18n="schedule" class="text-aux-5 cursor-default">
+                  Lunes a viernes: de 9:30 a 14:00 y de 16:30 a 20:00
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="flex flex-col gap-0.5 md:gap-1 mt-12 xl:mt-20">
-            <p class="text-aux-5">Jones & Brown Legal</p>
-            <p class="text-aux-5">&copy;2025 All Rights Reserved</p>
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end">
+            <div class="flex flex-col gap-0.5 md:gap-1 mt-12 xl:mt-20 cursor-default">
+              <p data-i18n="copyright" class="text-aux-5">Distrito 17 | Asesores inmobiliarios</p>
+              <p data-i18n="copyright2" class="text-aux-5">&copy;2025 All Rights Reserved</p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 items-center mt-6">
+              <a data-i18n="legal" href="/legal.html" class="text-sm tracking-[0.1px] hover:underline">Aviso Legal</a>
+              <span>&bull;</span>
+              <a data-i18n="privacy" href="/privacidad.html" class="text-sm tracking-[0.1px] hover:underline">Privacidad</a>
+              <span>&bull;</span>
+              <a data-i18n="cookies" href="/cookies.html" class="text-sm tracking-[0.1px] hover:underline">Cookies</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- JS and stuff -->
+  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/translations.js"></script>
 </body>
 </html>

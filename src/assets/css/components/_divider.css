@@ -1,0 +1,31 @@
+.divider {
+  border: 0;
+  height: 1px;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+
+  /* Animation properties */
+  transform-origin: center;
+  animation: growWidth 1s ease-out forwards;
+}
+.divider.fade-right {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+
+  /* Animation properties */
+  transform-origin: left;
+  animation: growWidth 1s ease-out forwards;
+}
+
+@keyframes growWidth {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+

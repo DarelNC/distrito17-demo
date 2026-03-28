@@ -1,0 +1,35 @@
+.hamburger-menu-wrapper {
+  @apply
+    flex
+    h-full
+    lg:hidden
+}
+.hamburger-menu {
+  @apply
+    flex
+    flex-col
+    justify-center
+    items-center
+    cursor-pointer
+    gap-2
+}
+.hamburger-bar {
+  @apply
+    bg-white
+    w-[30px]
+    h-[2px]
+    duration-150
+}
+.hamburger-menu-wrapper.open .hamburger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(0px, 0px);
+}
+.hamburger-menu-wrapper.open .hamburger-bar:nth-child(2) {
+  transform: rotate(-45deg) translate(0px, 0px);
+  margin-top: -10px;
+}
+
+.active-menu {
+  visibility: visible;
+  height: 100vh;
+  @apply duration-200
+}

@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Jones & Brown Legal</title>
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Distrito 17 | Asesores inmobiliarios Villaverde</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,37 +18,112 @@
   <div class="flex flex-col items-center">
     <!-- [hero] -->
     <div class="bg-primary w-full flex justify-center">
-      <div class="flex flex-col h-[31.25rem] md:h-[50rem] lg:h-screen w-full text-typo-light">
+      <div class="flex flex-col h-[min(31.25rem,100vh)] md:h-[min(50rem,100vh)] lg:h-screen w-full text-typo-light">
         <!-- [navbar] -->
-        <div class="flex items-center justify-between py-5 px-[3.125rem]">
+        <div id="navbar" class="flex items-center justify-between py-5 pl-4 pr-7 md:px-[3.125rem]">
           <!-- [logo] -->
-          <div>
-            <svg class="h-6" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4.66805 0L2.27483 1.38172C0.86716 2.19444 0 3.69641 0 5.32184V18.6786C0 20.3041 0.86716 21.806 2.27483 22.6188L4.6672 24L16.1187 17.3879L27.569 23.9987L29.9591 22.6188C31.3668 21.806 32.234 20.3041 32.234 18.6786V5.32184C32.234 3.69641 31.3668 2.19444 29.9591 1.38172L27.5677 0.00101649L16.1187 6.61106L4.66805 0Z"
-                fill="#F2F2F2" />
-            </svg>
+          <a href="/" class="block">
+            <img src="/logo.png" alt="" class="h-12 md:h-[3.75rem]">
+          </a>
+
+          <div class="hidden md:flex items-center gap-9">
+            <a href="/services" data-i18n="services" class="block text-aux-2 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 duration-150 hover:border-white">
+              <span>Servicios</span>
+            </a>
+
+            <a class="block text-aux-2 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 duration-150 hover:border-white"
+              href="https://wa.me/34617378073"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="waUrl"
+            >
+              <span data-i18n="ctaCall">Agenda una llamada</span>
+            </a>
+
+            <!-- [lang] -->
+            <div class="flex items-center justify-end gap-1 cursor-default ml-2 xl:ml-10">
+              <p onclick="changeLanguage('es')" class="btn-es cursor-pointer text-aux-2 leading-[100%] text-typo-light/40">ES</p>
+              <span class="text-lg font-medium text-typo-light/80"> / </span>
+              <p onclick="changeLanguage('en')" class="btn-en cursor-pointer text-aux-2 leading-[100%] text-typo-light/40">EN</p>
+            </div>
+            <!-- [lang] -->
           </div>
 
-          <div class="flex items-center gap-9">
-            <p class="text-aux-2">
-              Services
-            </p>
-            <p class="text-aux-2">
-              Schedule a Consult
-            </p>
+          <!-- ::menu-button -->
+          <div class="md:hidden">
+            <div id="menu-wrapper" class="hamburger-menu-wrapper menu-clikable-item" onclick="toggleMenu()">
+              <div class="hamburger-menu">
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- [sec 1] -->
-        <div class="hero-4 grow relative z-10 flex justify-center">
-          <!-- [overlay] -->
-          <div class="bg-black/40 absolute top-0 left-0 h-full w-full z-0"></div>
+        <div class="hero-6 grow relative z-10">
+          <!-- ::menu backdrop -->
+          <div id="menu-backdrop" class="bg-primary invisible absolute top-0 left-0 w-full h-0 z-50">
+            <div class="divider"></div>
+            
+            <div class="flex flex-col justify-between w-full h-full px-8 pt-8 pb-12">
+              <div>
+                <!-- [lang] -->
+                <div class="flex items-center justify-end gap-1.5 cursor-default">
+                  <p onclick="changeLanguage('es')" class="btn-es cursor-pointer text-lg leading-[100%] text-typo-light/40">ES</p>
+                  <span class="text-lg font-medium text-typo-light/80"> / </span>
+                  <p onclick="changeLanguage('en')" class="btn-en cursor-pointer text-lg leading-[100%] text-typo-light/40">EN</p>
+                </div>
+                <!-- [lang] -->
 
-          <div class="relative z-10 max-w-[90rem] w-full flex flex-col justify-end h-full p-6 md:px-[3.125rem] md:pb-[4.5rem]">
+                <a href="/services" data-i18n="services" class="block text-3xl mt-5 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 hover:border-white">
+                  <span>Servicios</span>
+                </a>
+                <a class="block text-3xl mt-5 cursor-pointer border-b-2 border-b-transparent w-fit pl-0.5 pr-1 hover:border-white"
+                  href="https://wa.me/34617378073"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="waUrl"
+                >
+                  <span data-i18n="ctaCall">Agenda una llamada</span>
+                </a>
+              </div>
+
+              <div class="mb-20">
+                <div class="flex gap-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                      <path
+                        d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                    </svg>
+                  </span>
+                  <a href="https://maps.app.goo.gl/7pemQbLcpydQkXqG9" target="_blank" data-i18n="address" class="underline">Avenida Orovilla 54, Madrid, 28041</a>
+                </div>
+                <div class="flex gap-2 mt-4 cursor-default">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                      <path
+                        d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
+                    </svg>
+                  </span>
+                  <p data-i18n="schedule">Lunes a viernes: de 9:30 a 14:00 y de 16:30 a 20:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ::menu backdrop -->
+
+
+          <!-- [overlay] -->
+          <div class="bg-black/50 absolute top-0 left-0 h-full w-full z-0"></div>
+
+          <div class="intro-y relative z-10 max-w-[90rem] w-full flex flex-col justify-end h-full p-6 md:px-[3.125rem] md:pb-[4.5rem] lg:px-[7.5rem] xl:pb-[7.5rem]">
             <div>
-              <p class="text-aux-3 font-medium max-w-[43.75rem]">
-                At Jones & Brown Legal, we are committed to exceptional service and successful outcomes with:
+              <p data-i18n="servicesHeroTitle" class="text-aux-3-v2 font-medium">
+                Tu tranquilidad empieza con una buena gestión.
+              </p>
+              <p data-i18n="servicesHeroSub" class="text-aux-4-v3 leading-[120%] max-w-[43.75rem] mt-2">
+                Un equipo de expertos a tu lado para valorar tu vivienda, asesorarte con la financiación y gestionar cada documento legal. Tu propiedad está en buenas manos.
               </p>
             </div>
           </div>
@@ -60,18 +135,18 @@
     <div class="max-w-6xl w-full">
       <div class="flex flex-col md:flex-row md:justify-between items-center gap-16 px-7 py-12">
         <div class="flex flex-col justify-center gap-6 md:gap-7 xl:gap-14">
-          <p class="text-secondary text-aux-8">30+</p>
-          <p class="text-secondary text-aux-9">years of experience</p>
+          <p class="text-secondary text-aux-8">10+</p>
+          <p data-i18n="statsCol1" class="text-secondary text-aux-9">años de experiencia</p>
         </div>
 
         <div class="flex flex-col justify-center gap-6 md:gap-7 xl:gap-14">
-          <p class="text-secondary text-aux-8">98%</p>
-          <p class="text-secondary text-aux-9">success rate in court</p>
+          <p class="text-secondary text-aux-8">400+</p>
+          <p data-i18n="statsCol2" class="text-secondary text-aux-9">familias asesoradas</p>
         </div>
 
         <div class="flex flex-col justify-center gap-6 md:gap-7 xl:gap-14">
-          <p class="text-secondary text-aux-8">120+</p>
-          <p class="text-secondary text-aux-9">attorneys at hand</p>
+          <p class="text-secondary text-aux-8">92%</p>
+          <p data-i18n="statsCol3" class="text-secondary text-aux-9">recomendaciones</p>
         </div>
       </div>
     </div>
@@ -81,86 +156,93 @@
       <div class="max-w-[62rem] w-full text-typo-light">
         <div>
           <p class="text-aux-3 md:max-w-[34.25rem]">
-            Navigating Complex Legal Landscapes? We Can Help.
+            <span data-i18n="sec3Title">¿Listo para dar el siguiente paso?</span>
+            <span data-i18n="sec3Sub">Podemos ayudarte.</span>
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-5 xl:gap-0 mt-16 md:mt-20 xl:mt-[7.5rem]">
             <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
-              <p class="text-aux-4 font-medium">Business and Corporate Law</p>
+              <p data-i18n="service_1_label" class="text-aux-4 font-medium">Asesoramiento personalizado</p>
               <div class="mt-6 xl:mt-0 xl:w-1/2">
-                <p class="text-aux-4">Business formation (LLCs, corporations, partnerships)</p>
-                <p class="text-aux-4">Contract drafting and review</p>
-                <p class="text-aux-4">Mergers and acquisitions</p>
-                <p class="text-aux-4">Intellectual property protection</p>
-                <p class="text-aux-4">Employment law and workplace policies</p>
-                <p class="text-aux-4">Corporate governance</p>
-                <p class="text-aux-4">Shareholder and partnership disputes</p>
+                <p data-i18n="service_1_desc" class="text-aux-4 max-w-[20rem]">Te acompañamos de principio a fin, resolviendo tus dudas y protegiendo tus intereses en cada paso.</p>
               </div>
             </div>
 
             <!--  -->
             <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
-              <p class="text-aux-4 font-medium">Litigation and Dispute Resolution</p>
+              <p data-i18n="service_2_label" class="text-aux-4 font-medium">Valoraciones gratuitas</p>
               <div class="mt-6 xl:mt-0 xl:w-1/2">
-                <p class="text-aux-4">Civil litigation</p>
-                <p class="text-aux-4">Commercial litigation</p>
-                <p class="text-aux-4">Arbitration and mediation</p>
-                <p class="text-aux-4">Class action lawsuits</p>
-                <p class="text-aux-4">Personal injury claims</p>
-                <p class="text-aux-4">Product liability cases</p>
+                <p data-i18n="service_2_desc" class="text-aux-4 max-w-[20rem]">Conoce el valor real de tu vivienda en el mercado actual de Villaverde con un informe detallado y sin compromiso.</p>
               </div>
             </div>
 
             <!--  -->
             <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
-              <p class="text-aux-4 font-medium">Family Law</p>
+              <p data-i18n="service_3_label" class="text-aux-4 font-medium">Certificados energéticos</p>
               <div class="mt-6 xl:mt-0 xl:w-1/2">
-                <p class="text-aux-4">Divorce and separation</p>
-                <p class="text-aux-4">Child custody and support</p>
-                <p class="text-aux-4">Prenuptial and postnuptial agreements</p>
-                <p class="text-aux-4">Adoption and surrogacy</p>
-                <p class="text-aux-4">Domestic violence protection</p>
+                <p data-i18n="service_3_desc" class="text-aux-4 max-w-[20rem]">Gestionamos la etiqueta de eficiencia energética de tu inmueble, un trámite obligatorio para vender o alquilar.</p>
               </div>
             </div>
 
             <!--  -->
             <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
-              <p class="text-aux-4 font-medium">Criminal Defense</p>
+              <p data-i18n="service_4_label" class="text-aux-4 font-medium">Tramitación de herencias</p>
               <div class="mt-6 xl:mt-0 xl:w-1/2">
-                <p class="text-aux-4">DUI and traffic offenses</p>
-                <p class="text-aux-4">White-collar crime defense</p>
-                <p class="text-aux-4">Drug charges</p>
-                <p class="text-aux-4">Assault and battery cases</p>
-                <p class="text-aux-4">Expungements and record sealing</p>
+                <p data-i18n="service_4_desc" class="text-aux-4 max-w-[20rem]">Resolvemos la parte más compleja: herencias, adjudicaciones y registros, para que la venta sea posible y fluida.</p>
               </div>
             </div>
 
             <!--  -->
             <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
-              <p class="text-aux-4 font-medium">Real Estate Law</p>
+              <p data-i18n="service_5_label" class="text-aux-4 font-medium">Financiación 100%</p>
               <div class="mt-6 xl:mt-0 xl:w-1/2">
-                <p class="text-aux-4">Property transactions (buying, selling, leasing)</p>
-                <p class="text-aux-4">Landlord-tenant disputes</p>
-                <p class="text-aux-4">Zoning and land use</p>
-                <p class="text-aux-4">Construction law</p>
-                <p class="text-aux-4">Real estate development</p>
+                <p data-i18n="service_5_desc" class="text-aux-4 max-w-[20rem]">Ayudamos a los compradores a conseguir la mejor hipoteca, facilitando que tu vivienda se venda mucho más rápido.</p>
               </div>
             </div>
 
             <!--  -->
             <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
-              <p class="text-aux-4 font-medium">Immigration Law</p>
+              <p data-i18n="service_6_label" class="text-aux-4 font-medium">Gestión de alquileres</p>
               <div class="mt-6 xl:mt-0 xl:w-1/2">
-                <p class="text-aux-4">Visa applications</p>
-                <p class="text-aux-4">Green cards and citizenship</p>
-                <p class="text-aux-4">Deportation defense</p>
-                <p class="text-aux-4">Employment-based immigration</p>
+                <p data-i18n="service_6_desc" class="text-aux-4 max-w-[20rem]">Buscamos al inquilino ideal y gestionamos el contrato para que tu inversión sea rentable y libre de estrés.</p>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
+              <p data-i18n="service_7_label" class="text-aux-4 font-medium">Viviendas VPO</p>
+              <div class="mt-6 xl:mt-0 xl:w-1/2">
+                <p data-i18n="service_7_desc" class="text-aux-4 max-w-[20rem]">Expertos en la gestión técnica y legal de Viviendas de Protección Oficial: descalificaciones, precios máximos y permisos.</p>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="col-span-1 border-t border-t-white/50 py-5 xl:flex xl:justify-between">
+              <p data-i18n="service_8_label" class="text-aux-4 font-medium">Servicio post-venta</p>
+              <div class="mt-6 xl:mt-0 xl:w-1/2">
+                <p data-i18n="service_8_desc" class="text-aux-4 max-w-[20rem]">No nos vamos tras la firma. Te ayudamos con las plusvalías, suministros y cualquier trámite pendiente.</p>
               </div>
             </div>
           </div>
 
           <!-- [divider] -->
           <div class="border-t border-t-white/50 mt-5"></div>
+        </div>
+      
+        <!-- [cta section] -->
+        <div class="mt-20">
+          <p data-i18n="sec3CtaTitle" class="text-aux-3">¿Quieres saber cuánto vale tu vivienda hoy mismo?</p>
+
+          <div class="mt-5">
+            <a class="btn variant-2 bg-accent w-fit rounded-full cursor-pointer"
+              href="https://wa.me/34617378073"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="waUrl"
+            >
+              <span data-i18n="sec3CtaBtn" class="text-typo-dark">Solicitar valoración gratuita</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -169,52 +251,78 @@
     <div class="hero-5 w-full h-[17.5rem] sm:h-[21.25rem] md:h-[30rem] lg:h-[39.063rem] 2xl:h-[50rem]"></div>
 
     <!-- [footer] -->
-    <div class="flex flex-col items-center w-full">
+    <div class="bg-primary text-typo-light flex flex-col items-center w-full">
       <div class="max-w-5xl w-full">
         <div class="px-7 py-[4.25rem]">
-          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
-            <!-- [logo] -->
-            <div>
-              <svg class="w-10" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.66805 0L2.27483 1.38172C0.86716 2.19444 0 3.69641 0 5.32184V18.6786C0 20.3041 0.86716 21.806 2.27483 22.6188L4.6672 24L16.1187 17.3879L27.569 23.9987L29.9591 22.6188C31.3668 21.806 32.234 20.3041 32.234 18.6786V5.32184C32.234 3.69641 31.3668 2.19444 29.9591 1.38172L27.5677 0.00101649L16.1187 6.61106L4.66805 0Z"
-                  fill="#000000" />
-              </svg>
-            </div>
-
-            <p class="text-aux-3">Jones & Brown Legal</p>
+          <!-- [logo] -->
+          <div class="-ml-2">
+            <img src="/logo.png" alt="" class="h-[3.75rem] lg:h-20">
           </div>
 
           <div class="mt-12 xl:mt-20">
-            <p class="text-aux-6">Deep expertise, decisive courtroom presence</p>
+            <p data-i18n="footerDesc" class="text-aux-6">Tu inmobiliaria de confianza en el corazón de Villaverde.</p>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-6 mt-12 xl:mt-20">
             <div class="flex flex-col gap-0.5 md:gap-1">
-              <p class="text-aux-5">smth@mail.com</p>
-              <p class="text-aux-5">(555) 123-4567</p>
+              <p id="mailto-trigger" data-i18n="footerMail" class="email-reverse text-aux-5 cursor-pointer w-fit hover:underline"></p>
+              <a
+                href="https://wa.me/34617378073"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="waUrl"
+              >
+                <span data-i18n="footerPhone" class="text-aux-5 cursor-pointer w-fit hover:underline">+34 617 378 073</span>
+              </a>
             </div>
 
-            <div class="flex flex-col gap-0.5 md:gap-1">
-              <p class="text-aux-5">123 Candyland Lane</p>
-              <p class="text-aux-5">Suite 123</p>
-              <p class="text-aux-5">Los Angeles, CA 941177</p>
-            </div>
-
-            <div class="flex flex-col gap-0.5 md:gap-1">
-              <p class="text-aux-5">Instagram</p>
-              <p class="text-aux-5">Facebook</p>
-              <p class="text-aux-5">Linkdln</p>
+            <div class="max-w-[18.75rem]">
+              <div class="flex gap-2">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                    <path
+                      d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                  </svg>
+                </span>
+                <a href="https://maps.app.goo.gl/7pemQbLcpydQkXqG9" target="_blank" data-i18n="address" class="underline text-aux-5">
+                  Avenida Orovilla 54, Madrid, 28041
+                </a>
+              </div>
+              <div class="flex gap-2 mt-2">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                    <path
+                      d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
+                  </svg>
+                </span>
+                <p data-i18n="schedule" class="text-aux-5 cursor-default">
+                  Lunes a viernes: de 9:30 a 14:00 y de 16:30 a 20:00
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="flex flex-col gap-0.5 md:gap-1 mt-12 xl:mt-20">
-            <p class="text-aux-5">Jones & Brown Legal</p>
-            <p class="text-aux-5">&copy;2025 All Rights Reserved</p>
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end">
+            <div class="flex flex-col gap-0.5 md:gap-1 mt-12 xl:mt-20 cursor-default">
+              <p data-i18n="copyright" class="text-aux-5">Distrito 17 | Asesores inmobiliarios</p>
+              <p data-i18n="copyright2" class="text-aux-5">&copy;2025 All Rights Reserved</p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 items-center mt-6">
+              <a data-i18n="legal" href="/legal.html" class="text-sm tracking-[0.1px] hover:underline">Aviso Legal</a>
+              <span>&bull;</span>
+              <a data-i18n="privacy" href="/privacidad.html" class="text-sm tracking-[0.1px] hover:underline">Privacidad</a>
+              <span>&bull;</span>
+              <a data-i18n="cookies" href="/cookies.html" class="text-sm tracking-[0.1px] hover:underline">Cookies</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- JS and stuff -->
+  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/translations.js"></script>
 </body>
 </html>
