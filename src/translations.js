@@ -110,6 +110,18 @@ const translations = {
 
     service_8_label: "Servicio post-venta",
     service_8_desc: "No nos vamos tras la firma. Te ayudamos con las plusvalías, suministros y cualquier trámite pendiente.",
+
+
+    ///////////////////////////////////////////
+    // reviewssss
+    review_1_text: '"Buscábamos una gestión rápida y sin complicaciones, y Mario superó nuestras expectativas. Transparencia total en los honorarios y una comunicación constante que te da mucha tranquilidad. Muy recomendables en la zona."',
+    review_1_author: '— Elena R.',
+    review_2_text: '"Impecable gestión en la venta de nuestra casa. Era nuestra primera vez en estos trámites y ellos lo hicieron todo muy fácil desde el minuto cero. Los volvería a elegir."',
+    review_2_author: '— Miriam S.',
+    review_3_text: '"Cercanos, profesionales y se encargan de todos los trámites legales. Nos solucionaron aspectos de la venta que ni siquiera eran su competencia. Muy recomendables."',
+    review_3_author: '— Juan F.',
+    review_4_text: '"Nuestra elección por Distrito 17 ha sido un acierto. Goyo ha sido atento, resolutivo y nos ha acompañado con honestidad en todo el proceso. ¡Un 10 como profesional!"',
+    review_4_author: '— Sergio P.',
   },
   en: {
     heroTitle: "Build your future in the heart of Villaverde",
@@ -191,7 +203,18 @@ const translations = {
 
     service_8_label: "After-Sales Service",
     service_8_desc: "We don’t leave after the signing. We help with capital gains taxes, utilities, and any pending paperwork.",
-  
+    
+
+    ///////////////////////////////////////////
+    // reviewssss
+    review_1_text: '"We were looking for a fast, hassle-free process, and Mario exceeded our expectations. Total transparency regarding fees and constant communication that gives you great peace of mind. Highly recommended in the area."',
+    review_1_author: '— Elena R.',
+    review_2_text: '"Flawless management in selling our home. It was our first time dealing with these procedures, and they made everything so easy from day one."',
+    review_2_author: "— Miriam S.",
+    review_3_text: '"Professional, approachable, and they handle all legal paperwork. They even solved issues that weren\'t their responsibility. Highly recommended."',
+    review_3_author: "— Juan F.",
+    review_4_text: '"Choosing Distrito 17 was a great decision. Goyo was helpful, efficient, and guided us with honesty throughout the entire process. A true professional!"',
+    review_4_author: "— Sergio P.",
   }
 };
 

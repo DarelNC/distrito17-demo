@@ -5,6 +5,7 @@
 @import "./components/_menu.css";
 @import "./components/_divider.css";
 @import "./components/_intro.css";
+@import "./components/_slider.css";
 
 * {
   /* outline: red 1px dotted; */

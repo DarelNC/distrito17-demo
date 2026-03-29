@@ -203,49 +203,99 @@
     <div class="bg-white w-full px-7 py-[4rem] md:py-[7.25rem] md:px-20">
       <div class="flex flex-col items-center gap-9 text-center">
         <div>
-          <p data-i18n="testimonialsTitle" class="text-aux-3 font-medium">Hear From Our Clients</p>
+          <p data-i18n="testimonialsTitle" class="text-aux-3 font-medium">Escucha a nuestros clientes</p>
           <p data-i18n="testimonialsHeading" class="text-aux-4 mt-8 lg:max-w-[30rem]">
             Creemos que las experiencias de nuestros clientes dicen mucho sobre la calidad de nuestros servicios. Esto es lo que algunos de ellos tienen que decir:
           </p>
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- TODO slider -->
-        <div class="bg-[#F6F6F6] py-7 px-12 w-full max-w-[46.125rem]">
-          <div>
-            <p class="text-aux-3">
-              "Jones & Brown Legal handled my estate planning
-              with such care and professionalism. They listened
-              to my concerns and made the process clear and straightforward.
-              I now have complete peace of mind knowing my family's future is secure." 
-            </p>
-
-            <p class="text-aux-3 mt-8">— David L., Business Owner</p>
-          </div>
-
-          <div class="flex justify-center items-center gap-5 mt-20">
-            <!-- [left arrow] -->
-            <span>
-              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f">
-                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-              </svg>
-            </span>
-
-            <!-- [dots] -->
-            <div class="flex items-center gap-2.5">
-              <span class="bg-secondary min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
-              <span class="bg-black/25 min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
-              <span class="bg-black/25 min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
-              <span class="bg-black/25 min-w-2.5 min-h-2.5 max-w-2.5 max-h-2.5 rounded-full"></span>
+        <div class="bg-[#F6F6F6] w-full max-w-[46.125rem]">
+          <div id="testimonial-slider" class="slider-wrapper no-scrollbar">
+    
+            <div class="slide-container">
+              <p data-i18n="review_1_text" class="text-aux-3">"Buscábamos una gestión rápida y sin complicaciones, y Mario superó nuestras expectativas. Transparencia total en los honorarios y una comunicación constante que te da mucha tranquilidad. Muy recomendables en la zona."</p>
+              <p data-i18n="review_1_author" class="text-aux-3 mt-8">— Elena R.</p>
             </div>
 
-            <!-- [right arrow] -->
-            <span>
-              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f">
-                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-              </svg>
-            </span>
+            <div class="slide-container">
+              <p data-i18n="review_2_text" class="text-aux-3">"Impecable gestión en la venta de nuestra casa. Era nuestra primera vez en estos trámites y ellos lo hicieron todo muy fácil desde el minuto cero. Los volvería a elegir."</p>
+              <p data-i18n="review_2_author" class="text-aux-3 mt-8">— Miriam S.</p>
+            </div>
+
+            <div class="slide-container">
+              <p data-i18n="review_3_text" class="text-aux-3">"Cercanos, profesionales y se encargan de todos los trámites legales. Nos solucionaron aspectos de la venta que ni siquiera eran su competencia. Muy recomendables."</p>
+              <p data-i18n="review_3_author" class="text-aux-3 mt-8">— Juan F.</p>
+            </div>
+
+            <div class="slide-container">
+              <p data-i18n="review_4_text" class="text-aux-3">"Nuestra elección por Distrito 17 ha sido un acierto. Goyo ha sido atento, resolutivo y nos ha acompañado con honestidad en todo el proceso. ¡Un 10 como profesional!"</p>
+              <p data-i18n="review_4_author" class="text-aux-3 mt-8">— Sergio P.</p>
+            </div>
+
+          </div>
+
+          <div class="flex justify-center items-center gap-5 mb-7">
+            <button id="prevBtn" class="hover:opacity-50 transition-opacity cursor-pointer">
+              <svg class="size-6" viewBox="0 -960 960 960" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" /></svg>
+            </button>
+
+            <div id="testimonial-dots" class="flex items-center gap-2.5">
+              <span class="dot bg-secondary min-w-2.5 min-h-2.5 rounded-full transition-all"></span>
+              <span class="dot bg-black/25 min-w-2.5 min-h-2.5 rounded-full transition-all"></span>
+              <span class="dot bg-black/25 min-w-2.5 min-h-2.5 rounded-full transition-all"></span>
+              <span class="dot bg-black/25 min-w-2.5 min-h-2.5 rounded-full transition-all"></span>
+            </div>
+
+            <button id="nextBtn" class="hover:opacity-50 transition-opacity cursor-pointer">
+              <svg class="size-6" viewBox="0 -960 960 960" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
+            </button>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div>
           <p data-i18n="ctaHeading" class="text-aux-4">
@@ -262,7 +312,7 @@
               rel="noopener noreferrer"
               data-i18n="waUrl"
             >
-              <span data-i18n="ctaCall" class="text-typo-light">Schedule a Consult</span>
+              <span data-i18n="ctaCall" class="text-typo-light">Agenda una llamada</span>
             </a>
           </div>
         </div>
@@ -349,5 +399,6 @@
   <!-- JS and stuff -->
   <script type="module" src="src/main.js"></script>
   <script type="module" src="src/translations.js"></script>
+  <script type="module" src="src/slider.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.slider-wrapper {
+  background-color: #F6F6F6;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  @apply pb-20 snap-x snap-mandatory
+}
+
+.slide-container {
+  min-width: 100%;
+  @apply snap-center pt-7 px-12
+}
