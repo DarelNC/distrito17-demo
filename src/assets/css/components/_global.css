@@ -11,19 +11,19 @@ body {
   background-size: cover;
 }
 .hero-2 {
-  background-image: url("/src/assets/images/img-aux-1.jpg");
+  background-image: url("/src/assets/images/img-aux-1.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero-3 {
-  background-image: url("/src/assets/images/img-aux-2.jpg");
+  background-image: url("/src/assets/images/img-aux-2.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero-5 {
-  background-image: url("/src/assets/images/img-aux-4.jpg");
+  background-image: url("/src/assets/images/img-aux-4.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,7 +35,7 @@ body {
   background-size: cover;
 }
 .hero-7 {
-  background-image: url("/src/assets/images/img-aux-6.jpg");
+  background-image: url("/src/assets/images/img-aux-6.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

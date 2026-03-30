@@ -11,8 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
-  <link rel="preload" href="src/assets/css/styles.css" as="style">
-  <link rel="stylesheet" href="src/assets/css/styles.css">
+  <!--  -->
+  <link rel="preload" as="image" href="/src/assets/images/img-aux-5.webp">
+  <!--  -->
+
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body>
   <div class="flex flex-col items-center">
@@ -309,11 +312,11 @@
             </div>
 
             <div class="flex flex-wrap gap-2 items-center mt-6">
-              <a data-i18n="legal" href="/legal.html" class="text-sm tracking-[0.1px] hover:underline">Aviso Legal</a>
+              <a data-i18n="legal" href="/legal" class="text-sm tracking-[0.1px] hover:underline">Aviso Legal</a>
               <span>&bull;</span>
-              <a data-i18n="privacy" href="/privacidad.html" class="text-sm tracking-[0.1px] hover:underline">Privacidad</a>
+              <a data-i18n="privacy" href="/privacidad" class="text-sm tracking-[0.1px] hover:underline">Privacidad</a>
               <span>&bull;</span>
-              <a data-i18n="cookies" href="/cookies.html" class="text-sm tracking-[0.1px] hover:underline">Cookies</a>
+              <a data-i18n="cookies" href="/cookies" class="text-sm tracking-[0.1px] hover:underline">Cookies</a>
             </div>
           </div>
         </div>
@@ -322,7 +325,7 @@
   </div>
 
   <!-- JS and stuff -->
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/script.js"></script>
   <script type="module" src="src/translations.js"></script>
 </body>
 </html>
