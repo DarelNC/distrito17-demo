@@ -20,9 +20,11 @@ function changeLanguage(lang) {
   });
 }
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Miramos si hay algo en localStorage. 
-  // 2. Si no, ponemos 'es' por defecto.
-  const savedLang = localStorage.getItem('selectedLang') || 'es';
+  // 1. Mirar localStorage
+  // 2. Si no, mirar el idioma del navegador (navigator.language)
+  // 3. Si nada de eso sirve o no es 'en', poner 'es' por defecto
+  const browserLang = navigator.language.startsWith('en') ? 'en' : 'es';
+  const savedLang = localStorage.getItem('selectedLang') || browserLang;
   changeLanguage(savedLang);
 });
 
